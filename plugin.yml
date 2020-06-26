@@ -1,0 +1,23 @@
+main: com.alexferrari.vipupgrade.VIPUpgrade
+name: vipupgrade
+version: 1.0
+author: Alex Ferrari
+description: Provides a command to buy the VIP rank for $20,000.
+depend:
+- Craftconomy3
+commands:
+   buyvip:
+      description: Buys the VIP rank for $20,000.
+      aliases: buyvip
+      usage: "Usage: /buyvip"
+      permission: vipupgrade.buyvip
+      permission-message: You don't have the alexferrari.buyvip permission.
+permissions:
+   vipupgrade.buyvip:
+      description: Allows usage of buyvip
+      default: op
+   vipupgrade.*:
+      description: Allows usage of all vipupgrade commands
+      default: op
+      children:
+         vipupgrade.buyvip: true
